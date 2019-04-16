@@ -17,10 +17,15 @@ class CrudsController extends Controller
     public function create(Generator $faker)
     {
         $crud = new Crud();
-        // $crud->name = $faker->lexify('????????');
         $crud->name = $faker->name;
-        // $crud->color = $faker->boolean ? 'red' : 'green';
         $colorNum = $faker->numberBetween(1, 3);
+
+        //generate battle stats
+        $crud->atk = $faker->numberBetween(1, 15);
+        $crud->def = $faker->numberBetween(1, 15);
+        $crud->hp = $faker->numberBetween(60, 180);
+        $crud->currentHp = $crud->hp;
+        $crud->description = $faker->realText($maxNbChars = 100, $indexSize = 2);
 
         switch($colorNum){
             case 1:
@@ -43,6 +48,7 @@ class CrudsController extends Controller
     {
         $crud = Crud::findOrFail($id);
         $crud->color = $request->color;
+        $crud->currentHp = $request->hp;
         $crud->save();
 
         return response(null, Response::HTTP_OK);

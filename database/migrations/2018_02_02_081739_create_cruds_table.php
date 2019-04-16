@@ -18,8 +18,8 @@ class CreateCrudsTable extends Migration
             $table->text('name');
             $table->text('color');
             $table->timestamps();
-        });
-    }
+        });//end schema create
+    }//end up()
 
     /**
      * Reverse the migrations.
@@ -29,5 +29,5 @@ class CreateCrudsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('cruds');
-    }
-}
+    }//end down
+}//end migration

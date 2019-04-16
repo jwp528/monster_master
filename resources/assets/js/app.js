@@ -8,6 +8,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
 Vue.config.devtools = true;
 Vue.config.performance = true;
@@ -19,11 +21,29 @@ Vue.config.performance = true;
  */
 
 import App from './components/App.vue';
+import CrudsList from './components/CrudsComponent.vue';
+import AboutComponent from "./components/AboutComponent.vue";
 
-const app = new Vue({
-  el: '#app',
-  components: {
-    App
+const routes = [
+  {
+    name: 'cruds',
+    path: '/',
+    component: CrudsList
   },
-  render: h => h(App)
-});
+  {
+    name: 'about',
+    path: '/about',
+    component: AboutComponent
+  }
+];//end routes
+
+const router = new VueRouter({mode: 'history', routes: routes});
+const app = new Vue(Vue.util.extend({router}, App)).$mount("#app");
+// const app = new Vue({
+//   el: '#app',
+//   components: {
+//     App,
+//     AboutComponent,
+//   },
+//   render: h => h(App)
+// });
