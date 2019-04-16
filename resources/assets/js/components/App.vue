@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <div class="container">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
           <ul class="navbar-nav">
             <li class="nav-item">
               <router-link to="/" class="nav-link">Cruds</router-link>
