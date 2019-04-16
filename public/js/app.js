@@ -1779,7 +1779,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 function Crud(_ref) {
   var id = _ref.id,
       color = _ref.color,
@@ -4540,7 +4539,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.crud {\n    display: flex;\n    margin: 1em 1em 1em 0;\n    border: 1px solid #d1d1d1;\n    padding: 1em;\n    max-width: 350px;\n    background-color: white;\n}\n.crud img {\n    height: 70px;\n}\n.col-2 {\n    margin-left: 1em;\n}\n.col-2 > h3 {\n    margin: 0.5em 0;\n}\n", ""]);
+exports.push([module.i, "\n.crud {\n    display: flex;\n    margin: 1em 1em 1em 0;\n    border: 1px solid #d1d1d1;\n    padding: 1em;\n    background-color: white;\n}\n.crud img {\n    height: 140px;\n}\n.col-2 {\n    margin-left: 1em;\n}\n.col-2 > h3 {\n    margin: 0.5em 0;\n}\n", ""]);
 
 // exports
 
@@ -33429,49 +33428,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._l(_vm.cruds, function(crud) {
-        return _c(
-          "crud-component",
-          _vm._b(
-            { key: crud.id, on: { update: _vm.update, delete: _vm.del } },
+  return _c("div", { attrs: { id: "app" } }, [
+    _c(
+      "div",
+      { staticClass: "col-lg-4 col-12 mx-auto" },
+      [
+        _c("div", { staticClass: "heading" }, [
+          _c("h1", [
+            _vm._v("Cruds "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                on: {
+                  click: function($event) {
+                    return _vm.create()
+                  }
+                }
+              },
+              [_vm._v("Add")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.cruds, function(crud) {
+          return _c(
             "crud-component",
-            crud,
-            false
+            _vm._b(
+              { key: crud.id, on: { update: _vm.update, delete: _vm.del } },
+              "crud-component",
+              crud,
+              false
+            )
           )
-        )
-      }),
-      _vm._v(" "),
-      _c("div", [
-        _c(
-          "button",
-          {
-            on: {
-              click: function($event) {
-                return _vm.create()
-              }
-            }
-          },
-          [_vm._v("Add")]
-        )
-      ])
-    ],
-    2
-  )
+        })
+      ],
+      2
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "heading" }, [_c("h1", [_vm._v("Cruds")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -33493,18 +33489,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "crud" }, [
-    _c("div", { staticClass: "col-1" }, [
-      _c("img", { attrs: { src: _vm.image } })
+  return _c("div", { staticClass: "crud d-block d-md-flex" }, [
+    _c("div", { staticClass: "col-md-6 col-sm-12" }, [
+      _c("img", { staticClass: "mb-3", attrs: { src: _vm.image } })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "col-2" }, [
+    _c("div", { staticClass: "col-md-6 col-sm-12" }, [
       _c("h3", [_vm._v("Name: " + _vm._s(_vm._f("properCase")(_vm.name)))]),
       _vm._v(" "),
       _c(
         "select",
-        { on: { change: _vm.update } },
-        _vm._l(["red", "green"], function(col) {
+        { staticClass: "form-control mb-3", on: { change: _vm.update } },
+        _vm._l(["red", "blue", "green"], function(col) {
           return _c(
             "option",
             {
@@ -33520,7 +33516,9 @@ var render = function() {
         0
       ),
       _vm._v(" "),
-      _c("button", { on: { click: _vm.del } }, [_vm._v("Delete")])
+      _c("button", { staticClass: "btn btn-danger", on: { click: _vm.del } }, [
+        _vm._v("Delete")
+      ])
     ])
   ])
 }
@@ -45955,8 +45953,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp\www\sites\devlift\vue-laravel-crud\resources\assets\js\app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp\www\sites\devlift\vue-laravel-crud\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
+__webpack_require__(/*! C:\wamp\www\sites\git\monster_master\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp\www\sites\git\monster_master\resources\assets\sass\app.scss */"./resources/assets/sass/app.scss");
 
 
 /***/ })

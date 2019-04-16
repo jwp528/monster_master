@@ -1,20 +1,20 @@
 <template>
-    <div class="crud">
-        <div class="col-1">
-            <img :src="image"/>
+    <div class="crud d-block d-md-flex">
+        <div class="col-md-6 col-sm-12">
+            <img class="mb-3" :src="image"/>
         </div>
-        <div class="col-2">
+        <div class="col-md-6 col-sm-12">
             <h3>Name: {{ name | properCase }}</h3>
-            <select @change="update">
+            <select class="form-control mb-3" @change="update">
                 <option
-                        v-for="col in [ 'red', 'green' ]"
+                        v-for="col in [ 'red', 'blue', 'green' ]"
                         :value="col"
                         :key="col"
                         :selected="col === color ? 'selected' : ''"
                 >{{ col | properCase }}</option>
 
             </select>
-            <button @click="del">Delete</button>
+            <button class="btn btn-danger" @click="del">Delete</button>
         </div>
     </div>
 </template>
@@ -47,12 +47,11 @@
         margin: 1em 1em 1em 0;
         border: 1px solid #d1d1d1;
         padding: 1em;
-        max-width: 350px;
         background-color: white;
     }
 
     .crud img {
-        height: 70px;
+        height: 140px;
     }
 
     .col-2 {

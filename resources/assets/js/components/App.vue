@@ -1,7 +1,8 @@
 <template>
     <div id="app">
+      <div class="col-lg-4 col-12 mx-auto">
         <div class="heading">
-            <h1>Cruds</h1>
+            <h1>Cruds <button class="btn btn-primary" @click="create()">Add</button></h1>
         </div>
         <crud-component
                 v-for="crud in cruds"
@@ -10,9 +11,7 @@
                 @update="update"
                 @delete="del"
         ></crud-component>
-        <div>
-            <button @click="create()">Add</button>
-        </div>
+      </div>
     </div>
 </template>
 
